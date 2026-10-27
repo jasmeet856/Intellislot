@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IntelliSlot | Weather</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/weather.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            Intelli<span>Slot</span>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                📊 Dashboard
+            </a>
+
+            <a href="calendar.html">
+                📅 Calendar
+            </a>
+
+            <a href="campus-events.html">
+                🎓 Campus Events
+            </a>
+
+            <a href="corporate-events.html">
+                🏢 Corporate Events
+            </a>
+
+            <a href="holidays-festivals.html">
+                🎉 Holidays & Festivals
+            </a>
+
+            <a href="weather.html" class="active">
+                🌤️ Weather
+            </a>
+
+            <a href="#">
+                🌫️ Air Quality
+            </a>
+
+            <a href="#">
+                🔔 Notifications
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#">
+                ⚙️ Settings
+            </a>
+
+            <a href="index.html">
+                🏠 Home
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <div>
+                <p class="small-heading">
+                    WEATHER
+                </p>
+
+                <h1>
+                    Weather Dashboard 🌤️
+                </h1>
+
+                <p class="page-description">
+                    Check current weather conditions and forecast.
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- Search -->
+        <section class="weather-search">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name..."
+                value="Ludhiana"
+            >
+
+            <button id="searchWeatherBtn">
+                🔍 Search
+            </button>
+
+            <button id="refreshWeatherBtn">
+                🔄 Refresh
+            </button>
+
+        </section>
+
+
+        <!-- Loading -->
+        <div id="weatherLoading" class="weather-message">
+            Loading weather...
+        </div>
+
+
+        <!-- Error -->
+        <div id="weatherError" class="weather-error">
+            Unable to load weather data.
+        </div>
+
+
+        <!-- Weather Content -->
+        <section id="weatherContent" class="weather-content">
+
+            <!-- Main Weather Card -->
+            <div class="current-weather-card">
+
+                <div class="weather-top">
+
+                    <div>
+
+                        <p class="weather-location">
+                            📍 <span id="locationName">Ludhiana</span>
+                        </p>
+
+                        <h2 id="temperature">
+                            --°C
+                        </h2>
+
+                        <p id="weatherDescription">
+                            Loading...
+                        </p>
+
+                    </div>
+
+                    <div
+                        id="weatherIcon"
+                        class="weather-big-icon"
+                    >
+                        🌤️
+                    </div>
+
+                </div>
+
+                <p class="updated-time">
+                    Last updated: <span id="updatedTime">--</span>
+                </p>
+
+            </div>
+
+
+            <!-- Weather Details -->
+            <div class="weather-details-grid">
+
+                <div class="weather-detail-card">
+
+                    <span class="detail-icon">
+                        💧
+                    </span>
+
+                    <div>
+                        <p>Humidity</p>
+                        <strong id="humidity">--%</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="weather-detail-card">
+
+                    <span class="detail-icon">
+                        💨
+                    </span>
+
+                    <div>
+                        <p>Wind Speed</p>
+                        <strong id="windSpeed">-- km/h</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="weather-detail-card">
+
+                    <span class="detail-icon">
+                        🌡️
+                    </span>
+
+                    <div>
+                        <p>Feels Like</p>
+                        <strong id="feelsLike">--°C</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="weather-detail-card">
+
+                    <span class="detail-icon">
+                        ☀️
+                    </span>
+
+                    <div>
+                        <p>Weather Code</p>
+                        <strong id="weatherCode">--</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Information -->
+            <div class="weather-info-card">
+
+                <h3>
+                    Weather Information
+                </h3>
+
+                <p>
+                    Weather data is fetched using a weather API
+                    and displayed in the IntelliSlot dashboard.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/weather.js"></script>
+
+</body>
+</html>

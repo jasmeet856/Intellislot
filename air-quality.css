@@ -1,0 +1,380 @@
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-description {
+    color: #75837e;
+    font-size: 14px;
+}
+
+
+/* Search */
+
+.air-search {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+#airCityInput {
+    flex: 1;
+
+    padding: 14px 16px;
+
+    border: 1px solid #dce7e3;
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+#airCityInput:focus {
+    border-color: #4d8878;
+}
+
+.air-search button {
+    padding: 0 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #315f54;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.air-search button:hover {
+    background: #193d36;
+}
+
+
+/* Messages */
+
+.air-message {
+    background: white;
+
+    border: 1px solid #e5ece9;
+    border-radius: 12px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #75837e;
+}
+
+.air-error {
+    display: none;
+
+    background: #fff5f5;
+
+    border: 1px solid #f1cccc;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    color: #c62828;
+
+    text-align: center;
+}
+
+
+/* Content */
+
+.air-content {
+    display: none;
+}
+
+
+/* Main AQI Card */
+
+.aqi-main-card {
+    background: white;
+
+    border: 1px solid #e5ece9;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+}
+
+.aqi-location {
+    color: #75837e;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.aqi-main {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.aqi-label {
+    color: #75837e;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.aqi-main h2 {
+    font-size: 52px;
+
+    color: #193d36;
+
+    margin-bottom: 10px;
+}
+
+.aqi-status {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.aqi-icon {
+    font-size: 75px;
+}
+
+.aqi-updated {
+    color: #9aa7a2;
+
+    font-size: 11px;
+
+    margin-top: 25px;
+}
+
+
+/* Section */
+
+.section-title {
+    color: #193d36;
+
+    font-size: 19px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Pollutants */
+
+.pollutants-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.pollutant-card {
+    background: white;
+
+    border: 1px solid #e5ece9;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.pollutant-icon {
+    width: 45px;
+
+    height: 45px;
+
+    background: #e8f1ee;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+.pollutant-card p {
+    color: #75837e;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.pollutant-card strong {
+    color: #193d36;
+
+    font-size: 16px;
+}
+
+
+/* Information */
+
+.aqi-info-card {
+    background: white;
+
+    border: 1px solid #e5ece9;
+
+    border-radius: 12px;
+
+    padding: 25px;
+}
+
+.aqi-info-card h3 {
+    color: #193d36;
+
+    margin-bottom: 15px;
+}
+
+.aqi-info-card p {
+    color: #75837e;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-top: 15px;
+}
+
+
+/* AQI Guide */
+
+.aqi-guide {
+    display: flex;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.aqi-guide div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 12px;
+
+    color: #75837e;
+}
+
+.guide-dot {
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+.guide-dot.good {
+    background: #4caf50;
+}
+
+.guide-dot.moderate {
+    background: #fbc02d;
+}
+
+.guide-dot.unhealthy {
+    background: #ff9800;
+}
+
+.guide-dot.poor {
+    background: #e53935;
+}
+
+
+/* AQI Status Classes */
+
+.aqi-good {
+    background: #e8f5e9;
+
+    color: #2e7d32;
+}
+
+.aqi-moderate {
+    background: #fff8e1;
+
+    color: #f57f17;
+}
+
+.aqi-unhealthy {
+    background: #fff3e0;
+
+    color: #ef6c00;
+}
+
+.aqi-poor {
+    background: #ffebee;
+
+    color: #c62828;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+
+    .pollutants-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .air-search {
+        flex-direction: column;
+    }
+
+    .air-search button {
+        padding: 13px;
+    }
+
+    .aqi-main {
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .aqi-icon {
+        font-size: 55px;
+    }
+
+    .pollutants-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

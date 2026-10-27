@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IntelliSlot | Corporate Events</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/corporate-events.css">
+
+</head>
+
+
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Intelli<span>Slot</span>
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                📊 Dashboard
+            </a>
+
+            <a href="calendar.html">
+                📅 Calendar
+            </a>
+
+            <a href="campus-events.html">
+                🎓 Campus Events
+            </a>
+
+            <a href="corporate-events.html" class="active">
+                🏢 Corporate Events
+            </a>
+
+            <a href="holidays-festivals.html">🎉 Holidays & Festivals</a>
+
+            <a href="weather.html">🌤️ Weather</a>
+
+            <a href="air-quality.html">🌫️ Air Quality</a>
+
+            <a href="notifications.html">🔔 Notifications</a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#">
+                ⚙️ Settings
+            </a>
+
+            <a href="index.html">
+                ← Home
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+
+        <!-- Header -->
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <p class="small-heading">
+                    CORPORATE EVENTS
+                </p>
+
+                <h1>
+                    Corporate Events 🏢
+                </h1>
+
+                <p class="date">
+                    Explore meetings, seminars and professional events
+                </p>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- Search and Filter -->
+
+        <section class="corporate-search">
+
+            <input
+                type="text"
+                id="corporateSearch"
+                placeholder="🔍 Search corporate events..."
+            >
+
+
+            <select id="corporateFilter">
+
+                <option value="All">
+                    All Categories
+                </option>
+
+                <option value="Meeting">
+                    Meeting
+                </option>
+
+                <option value="Conference">
+                    Conference
+                </option>
+
+                <option value="Seminar">
+                    Seminar
+                </option>
+
+                <option value="Workshop">
+                    Workshop
+                </option>
+
+                <option value="Networking">
+                    Networking
+                </option>
+
+            </select>
+
+        </section>
+
+
+
+        <!-- Corporate Events -->
+
+        <section
+            class="corporate-events-grid"
+            id="corporateEventsList"
+        >
+
+
+            <!-- Event 1 -->
+
+            <div
+                class="corporate-event-card"
+                data-category="Meeting"
+            >
+
+                <div class="corporate-event-icon">
+                    💼
+                </div>
+
+
+                <div class="corporate-event-content">
+
+                    <span class="corporate-category">
+                        Meeting
+                    </span>
+
+                    <h3>
+                        Corporate Strategy Meeting
+                    </h3>
+
+                    <p class="corporate-info">
+                        📅 18 September 2026
+                    </p>
+
+                    <p class="corporate-info">
+                        ⏰ 2:00 PM
+                    </p>
+
+                    <p class="corporate-info">
+                        📍 Conference Room
+                    </p>
+
+
+                    <button
+                        class="add-corporate-btn"
+                        data-name="Corporate Strategy Meeting"
+                        data-date="2026-09-18"
+                        data-time="14:00"
+                        data-type="Corporate"
+                        data-location="Conference Room"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Event 2 -->
+
+            <div
+                class="corporate-event-card"
+                data-category="Conference"
+            >
+
+                <div class="corporate-event-icon">
+                    🏢
+                </div>
+
+
+                <div class="corporate-event-content">
+
+                    <span class="corporate-category">
+                        Conference
+                    </span>
+
+                    <h3>
+                        Business Innovation Conference
+                    </h3>
+
+                    <p class="corporate-info">
+                        📅 22 September 2026
+                    </p>
+
+                    <p class="corporate-info">
+                        ⏰ 10:00 AM
+                    </p>
+
+                    <p class="corporate-info">
+                        📍 Grand Conference Hall
+                    </p>
+
+
+                    <button
+                        class="add-corporate-btn"
+                        data-name="Business Innovation Conference"
+                        data-date="2026-09-22"
+                        data-time="10:00"
+                        data-type="Corporate"
+                        data-location="Grand Conference Hall"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Event 3 -->
+
+            <div
+                class="corporate-event-card"
+                data-category="Seminar"
+            >
+
+                <div class="corporate-event-icon">
+                    🎤
+                </div>
+
+
+                <div class="corporate-event-content">
+
+                    <span class="corporate-category">
+                        Seminar
+                    </span>
+
+                    <h3>
+                        Leadership & Management Seminar
+                    </h3>
+
+                    <p class="corporate-info">
+                        📅 26 September 2026
+                    </p>
+
+                    <p class="corporate-info">
+                        ⏰ 11:30 AM
+                    </p>
+
+                    <p class="corporate-info">
+                        📍 Business Centre
+                    </p>
+
+
+                    <button
+                        class="add-corporate-btn"
+                        data-name="Leadership & Management Seminar"
+                        data-date="2026-09-26"
+                        data-time="11:30"
+                        data-type="Corporate"
+                        data-location="Business Centre"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Event 4 -->
+
+            <div
+                class="corporate-event-card"
+                data-category="Workshop"
+            >
+
+                <div class="corporate-event-icon">
+                    💻
+                </div>
+
+
+                <div class="corporate-event-content">
+
+                    <span class="corporate-category">
+                        Workshop
+                    </span>
+
+                    <h3>
+                        Digital Skills Workshop
+                    </h3>
+
+                    <p class="corporate-info">
+                        📅 30 September 2026
+                    </p>
+
+                    <p class="corporate-info">
+                        ⏰ 1:00 PM
+                    </p>
+
+                    <p class="corporate-info">
+                        📍 Training Room
+                    </p>
+
+
+                    <button
+                        class="add-corporate-btn"
+                        data-name="Digital Skills Workshop"
+                        data-date="2026-09-30"
+                        data-time="13:00"
+                        data-type="Corporate"
+                        data-location="Training Room"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Event 5 -->
+
+            <div
+                class="corporate-event-card"
+                data-category="Networking"
+            >
+
+                <div class="corporate-event-icon">
+                    🤝
+                </div>
+
+
+                <div class="corporate-event-content">
+
+                    <span class="corporate-category">
+                        Networking
+                    </span>
+
+                    <h3>
+                        Professional Networking Meet
+                    </h3>
+
+                    <p class="corporate-info">
+                        📅 5 October 2026
+                    </p>
+
+                    <p class="corporate-info">
+                        ⏰ 5:00 PM
+                    </p>
+
+                    <p class="corporate-info">
+                        📍 Business Lounge
+                    </p>
+
+
+                    <button
+                        class="add-corporate-btn"
+                        data-name="Professional Networking Meet"
+                        data-date="2026-10-05"
+                        data-time="17:00"
+                        data-type="Corporate"
+                        data-location="Business Lounge"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- No Results -->
+
+            <div
+                id="noCorporateEvents"
+                class="no-corporate-events"
+            >
+
+                🔍
+
+                <h3>
+                    No events found
+                </h3>
+
+                <p>
+                    Try another search or category.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="js/corporate-events.js"></script>
+
+</body>
+
+</html>

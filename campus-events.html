@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IntelliSlot | Campus Events</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/campus-events.css">
+
+</head>
+
+
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Intelli<span>Slot</span>
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                📊 Dashboard
+            </a>
+
+            <a href="calendar.html">
+                📅 Calendar
+            </a>
+
+            <a href="campus-events.html" class="active">
+                🎓 Campus Events
+            </a>
+
+            <!-- CORRECTED LINK -->
+            <a href="corporate-events.html">
+                🏢 Corporate Events
+            </a>
+
+            <a href="holidays-festivals.html">🎉 Holidays & Festivals</a>
+
+            <a href="weather.html">🌤️ Weather</a>
+
+            <a href="air-quality.html">🌫️ Air Quality</a>
+
+            <a href="notifications.html">🔔 Notifications</a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#">
+                ⚙️ Settings
+            </a>
+
+            <a href="index.html">
+                ← Home
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+
+        <!-- Header -->
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <p class="small-heading">
+                    CAMPUS EVENTS
+                </p>
+
+                <h1>
+                    Campus Events 🎓
+                </h1>
+
+                <p class="date">
+                    Discover upcoming events on campus
+                </p>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- Search & Filter -->
+
+        <section class="campus-search">
+
+            <input
+                type="text"
+                id="campusSearch"
+                placeholder="🔍 Search campus events..."
+            >
+
+
+            <select id="campusFilter">
+
+                <option value="All">
+                    All Categories
+                </option>
+
+                <option value="Technical">
+                    Technical
+                </option>
+
+                <option value="Workshop">
+                    Workshop
+                </option>
+
+                <option value="Cultural">
+                    Cultural
+                </option>
+
+                <option value="Sports">
+                    Sports
+                </option>
+
+                <option value="Seminar">
+                    Seminar
+                </option>
+
+            </select>
+
+        </section>
+
+
+
+        <!-- Campus Events -->
+
+        <section
+            class="campus-events-grid"
+            id="campusEventsList"
+        >
+
+
+            <!-- Event 1 -->
+
+            <div
+                class="campus-event-card"
+                data-category="Technical"
+            >
+
+                <div class="campus-event-icon">
+                    💻
+                </div>
+
+
+                <div class="campus-event-content">
+
+                    <span class="event-category">
+                        Technical
+                    </span>
+
+                    <h3>
+                        Tech Fest 2026
+                    </h3>
+
+                    <p class="event-info">
+                        📅 20 September 2026
+                    </p>
+
+                    <p class="event-info">
+                        ⏰ 10:00 AM
+                    </p>
+
+                    <p class="event-info">
+                        📍 Main Auditorium
+                    </p>
+
+
+                    <button
+                        class="add-calendar-btn"
+                        data-name="Tech Fest 2026"
+                        data-date="2026-09-20"
+                        data-time="10:00"
+                        data-type="Campus"
+                        data-location="Main Auditorium"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Event 2 -->
+
+            <div
+                class="campus-event-card"
+                data-category="Workshop"
+            >
+
+                <div class="campus-event-icon">
+                    🤖
+                </div>
+
+
+                <div class="campus-event-content">
+
+                    <span class="event-category">
+                        Workshop
+                    </span>
+
+                    <h3>
+                        AI & Machine Learning Workshop
+                    </h3>
+
+                    <p class="event-info">
+                        📅 24 September 2026
+                    </p>
+
+                    <p class="event-info">
+                        ⏰ 11:00 AM
+                    </p>
+
+                    <p class="event-info">
+                        📍 Seminar Hall
+                    </p>
+
+
+                    <button
+                        class="add-calendar-btn"
+                        data-name="AI & Machine Learning Workshop"
+                        data-date="2026-09-24"
+                        data-time="11:00"
+                        data-type="Campus"
+                        data-location="Seminar Hall"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Event 3 -->
+
+            <div
+                class="campus-event-card"
+                data-category="Cultural"
+            >
+
+                <div class="campus-event-icon">
+                    🎭
+                </div>
+
+
+                <div class="campus-event-content">
+
+                    <span class="event-category">
+                        Cultural
+                    </span>
+
+                    <h3>
+                        Annual Cultural Fest
+                    </h3>
+
+                    <p class="event-info">
+                        📅 28 September 2026
+                    </p>
+
+                    <p class="event-info">
+                        ⏰ 4:00 PM
+                    </p>
+
+                    <p class="event-info">
+                        📍 College Ground
+                    </p>
+
+
+                    <button
+                        class="add-calendar-btn"
+                        data-name="Annual Cultural Fest"
+                        data-date="2026-09-28"
+                        data-time="16:00"
+                        data-type="Campus"
+                        data-location="College Ground"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Event 4 -->
+
+            <div
+                class="campus-event-card"
+                data-category="Sports"
+            >
+
+                <div class="campus-event-icon">
+                    🏆
+                </div>
+
+
+                <div class="campus-event-content">
+
+                    <span class="event-category">
+                        Sports
+                    </span>
+
+                    <h3>
+                        Inter College Sports Meet
+                    </h3>
+
+                    <p class="event-info">
+                        📅 2 October 2026
+                    </p>
+
+                    <p class="event-info">
+                        ⏰ 9:00 AM
+                    </p>
+
+                    <p class="event-info">
+                        📍 Sports Complex
+                    </p>
+
+
+                    <button
+                        class="add-calendar-btn"
+                        data-name="Inter College Sports Meet"
+                        data-date="2026-10-02"
+                        data-time="09:00"
+                        data-type="Campus"
+                        data-location="Sports Complex"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Event 5 -->
+
+            <div
+                class="campus-event-card"
+                data-category="Seminar"
+            >
+
+                <div class="campus-event-icon">
+                    🎤
+                </div>
+
+
+                <div class="campus-event-content">
+
+                    <span class="event-category">
+                        Seminar
+                    </span>
+
+                    <h3>
+                        Career Guidance Seminar
+                    </h3>
+
+                    <p class="event-info">
+                        📅 6 October 2026
+                    </p>
+
+                    <p class="event-info">
+                        ⏰ 12:00 PM
+                    </p>
+
+                    <p class="event-info">
+                        📍 Conference Room
+                    </p>
+
+
+                    <button
+                        class="add-calendar-btn"
+                        data-name="Career Guidance Seminar"
+                        data-date="2026-10-06"
+                        data-time="12:00"
+                        data-type="Campus"
+                        data-location="Conference Room"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- No Results -->
+
+            <div
+                id="noCampusEvents"
+                class="no-campus-events"
+            >
+
+                🔍
+
+                <h3>
+                    No events found
+                </h3>
+
+                <p>
+                    Try another search or category.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="js/campus-events.js"></script>
+
+</body>
+
+</html>

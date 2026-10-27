@@ -1,0 +1,138 @@
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px 45px;
+  background: #f3f7f6;
+  color: #173f36;
+}
+
+.settings-header {
+  margin-bottom: 28px;
+}
+
+.settings-card {
+  max-width: 850px;
+  padding: 26px 30px;
+  margin-bottom: 24px;
+  background: white;
+  border: 1px solid #e0eae5;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(23, 63, 54, 0.08);
+}
+
+.settings-card h2 {
+  margin-bottom: 10px;
+  color: #174d40;
+}
+
+.section-description {
+  color: #687d76;
+  margin-bottom: 22px;
+}
+
+#profileForm label,
+.settings-card > label:not(.setting-option) {
+  display: block;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+
+#profileForm input,
+#themeSelect {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #cbd9d2;
+  border-radius: 8px;
+  background: white;
+  color: #173f36;
+}
+
+.save-button,
+.reset-button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #176b55;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.save-button:hover {
+  background: #104c3d;
+}
+
+.reset-button {
+  background: #b64242;
+}
+
+.setting-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e6eeea;
+}
+
+.setting-option span {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.setting-option small {
+  color: #687d76;
+}
+
+.status-message {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 22px 16px;
+  }
+
+  .settings-card {
+    padding: 20px 16px;
+  }
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121826;
+    color: #f1f5f9;
+}
+
+body.dark-theme .main-content {
+    background-color: #121826;
+    color: #f1f5f9;
+}
+
+body.dark-theme .settings-card {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    border: 1px solid #334155;
+}
+
+body.dark-theme .settings-card p,
+body.dark-theme .settings-card small {
+    color: #cbd5e1;
+}
+
+body.dark-theme .settings-card input,
+body.dark-theme .settings-card select {
+    background-color: #0f172a;
+    color: #f1f5f9;
+    border: 1px solid #475569;
+}
+
+body.dark-theme .settings-header p {
+    color: #cbd5e1;
+}

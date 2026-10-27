@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IntelliSlot | Settings</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+   <link rel="stylesheet" href="css/settings.css">
+
+
+    <script src="js/settings.js" defer></script>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">Intelli<span>Slot</span></div>
+
+        <nav>
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="calendar.html">📅 Calendar</a>
+            <a href="campus-events.html">🎓 Campus Events</a>
+            <a href="corporate-events.html">💼 Corporate Events</a>
+            <a href="holidays-festivals.html">🎉 Holidays & Festivals</a>
+            <a href="weather.html">🌤️ Weather</a>
+            <a href="air-quality.html">🌿 Air Quality</a>
+            <a href="notifications.html">🔔 Notifications</a>
+
+            <div class="sidebar-bottom">
+                <a href="settings.html" class="active">⚙️ Settings</a>
+                <a href="index.html">🏡 Home</a>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="settings-header">
+            <div>
+                <h1>Settings</h1>
+                <p>Manage your IntelliSlot preferences.</p>
+            </div>
+        </header>
+
+        <section class="settings-card">
+            <h2>👤 Profile Settings</h2>
+            <p class="section-description">
+                Update your profile information.
+            </p>
+
+            <form id="profileForm">
+                <label for="userName">Your Name</label>
+                <input
+                    type="text"
+                    id="userName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="userEmail">Email Address</label>
+                <input
+                    type="email"
+                    id="userEmail"
+                    placeholder="Enter your email"
+                >
+
+                <button type="submit" class="save-button">
+                    Save Profile
+                </button>
+
+                <p id="profileMessage" class="status-message"></p>
+            </form>
+        </section>
+
+        <section class="settings-card">
+            <h2>🎨 Appearance</h2>
+            <p class="section-description">
+                Choose your preferred dashboard theme.
+            </p>
+
+            <label for="themeSelect">Select Theme</label>
+
+            <select id="themeSelect">
+                <option value="light">Light Theme</option>
+                <option value="dark">Dark Theme</option>
+            </select>
+
+            <button type="button" id="saveTheme" class="save-button">
+                Apply Theme
+            </button>
+
+            <p id="themeMessage" class="status-message"></p>
+        </section>
+
+        <section class="settings-card">
+            <h2>🔔 Notification Preferences</h2>
+            <p class="section-description">
+                Choose which reminders you want to enable.
+            </p>
+
+            <label class="setting-option">
+                <span>
+                    <strong>Event Reminders</strong>
+                    <small>Receive reminders for upcoming events.</small>
+                </span>
+                <input type="checkbox" id="eventReminders" checked>
+            </label>
+
+            <label class="setting-option">
+                <span>
+                    <strong>Weather Updates</strong>
+                    <small>Enable weather-related updates.</small>
+                </span>
+                <input type="checkbox" id="weatherUpdates" checked>
+            </label>
+
+            <button type="button" id="saveNotifications" class="save-button">
+                Save Preferences
+            </button>
+
+            <p id="notificationMessage" class="status-message"></p>
+        </section>
+
+        <section class="settings-card">
+            <h2>🔄 Reset Preferences</h2>
+            <p class="section-description">
+                Restore your settings to their default values.
+            </p>
+
+            <button type="button" id="resetSettings" class="reset-button">
+                Reset Settings
+            </button>
+        </section>
+
+    </main>
+
+</body>
+</html>

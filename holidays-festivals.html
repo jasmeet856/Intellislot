@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IntelliSlot | Holidays & Festivals</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/holidays-festivals.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            Intelli<span>Slot</span>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                📊 Dashboard
+            </a>
+
+            <a href="calendar.html">
+                📅 Calendar
+            </a>
+
+            <a href="campus-events.html">
+                🎓 Campus Events
+            </a>
+
+            <a href="corporate-events.html">
+                🏢 Corporate Events
+            </a>
+
+            <a href="holidays-festivals.html" class="active">
+                🎉 Holidays & Festivals
+            </a>
+
+            <a href="weather.html">🌤️ Weather</a>
+
+           <a href="air-quality.html">🌫️ Air Quality</a>
+
+           <a href="notifications.html">🔔 Notifications</a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#">
+                ⚙️ Settings
+            </a>
+
+            <a href="index.html">
+                🏠 Home
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <div>
+                <p class="small-heading">
+                    HOLIDAYS & FESTIVALS
+                </p>
+
+                <h1>
+                    Holidays & Festivals 🎉
+                </h1>
+
+                <p class="page-description">
+                    Explore upcoming holidays and festivals and add them to your calendar.
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- Search & Filter -->
+        <section class="holiday-search">
+
+            <input
+                type="text"
+                id="holidaySearch"
+                placeholder="🔍 Search holiday or festival..."
+            >
+
+            <select id="holidayFilter">
+
+                <option value="All">
+                    All Categories
+                </option>
+
+                <option value="National">
+                    National
+                </option>
+
+                <option value="Religious">
+                    Religious
+                </option>
+
+                <option value="Cultural">
+                    Cultural
+                </option>
+
+                <option value="Festival">
+                    Festival
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- Holiday Cards -->
+        <section class="holidays-grid" id="holidaysList">
+
+
+            <!-- Gandhi Jayanti -->
+            <div
+                class="holiday-card"
+                data-category="National"
+                data-name="Gandhi Jayanti"
+            >
+
+                <div class="holiday-icon">
+                    🇮🇳
+                </div>
+
+                <div class="holiday-content">
+
+                    <span class="holiday-category">
+                        National
+                    </span>
+
+                    <h3>
+                        Gandhi Jayanti
+                    </h3>
+
+                    <p class="holiday-info">
+                        📅 02 October 2026
+                    </p>
+
+                    <p class="holiday-info">
+                        📆 Friday
+                    </p>
+
+                    <p class="holiday-description">
+                        National holiday observed to commemorate the birth anniversary of Mahatma Gandhi.
+                    </p>
+
+                    <button
+                        class="add-holiday-btn"
+                        data-name="Gandhi Jayanti"
+                        data-date="2026-10-02"
+                        data-time="00:00"
+                        data-type="National"
+                        data-location="India"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Dussehra -->
+            <div
+                class="holiday-card"
+                data-category="Festival"
+                data-name="Dussehra"
+            >
+
+                <div class="holiday-icon">
+                    🪔
+                </div>
+
+                <div class="holiday-content">
+
+                    <span class="holiday-category">
+                        Festival
+                    </span>
+
+                    <h3>
+                        Dussehra
+                    </h3>
+
+                    <p class="holiday-info">
+                        📅 20 October 2026
+                    </p>
+
+                    <p class="holiday-info">
+                        📆 Tuesday
+                    </p>
+
+                    <p class="holiday-description">
+                        A major Indian festival celebrating the victory of good over evil.
+                    </p>
+
+                    <button
+                        class="add-holiday-btn"
+                        data-name="Dussehra"
+                        data-date="2026-10-20"
+                        data-time="00:00"
+                        data-type="Festival"
+                        data-location="India"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Diwali -->
+            <div
+                class="holiday-card"
+                data-category="Religious"
+                data-name="Diwali"
+            >
+
+                <div class="holiday-icon">
+                    🪔
+                </div>
+
+                <div class="holiday-content">
+
+                    <span class="holiday-category">
+                        Religious
+                    </span>
+
+                    <h3>
+                        Diwali
+                    </h3>
+
+                    <p class="holiday-info">
+                        📅 08 November 2026
+                    </p>
+
+                    <p class="holiday-info">
+                        📆 Sunday
+                    </p>
+
+                    <p class="holiday-description">
+                        The festival of lights celebrated with lamps, decorations and family gatherings.
+                    </p>
+
+                    <button
+                        class="add-holiday-btn"
+                        data-name="Diwali"
+                        data-date="2026-11-08"
+                        data-time="00:00"
+                        data-type="Religious"
+                        data-location="India"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Christmas -->
+            <div
+                class="holiday-card"
+                data-category="Religious"
+                data-name="Christmas"
+            >
+
+                <div class="holiday-icon">
+                    🎄
+                </div>
+
+                <div class="holiday-content">
+
+                    <span class="holiday-category">
+                        Religious
+                    </span>
+
+                    <h3>
+                        Christmas
+                    </h3>
+
+                    <p class="holiday-info">
+                        📅 25 December 2026
+                    </p>
+
+                    <p class="holiday-info">
+                        📆 Friday
+                    </p>
+
+                    <p class="holiday-description">
+                        Christmas is celebrated with decorations, gatherings and festive activities.
+                    </p>
+
+                    <button
+                        class="add-holiday-btn"
+                        data-name="Christmas"
+                        data-date="2026-12-25"
+                        data-time="00:00"
+                        data-type="Religious"
+                        data-location="India"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Republic Day -->
+            <div
+                class="holiday-card"
+                data-category="National"
+                data-name="Republic Day"
+            >
+
+                <div class="holiday-icon">
+                    🇮🇳
+                </div>
+
+                <div class="holiday-content">
+
+                    <span class="holiday-category">
+                        National
+                    </span>
+
+                    <h3>
+                        Republic Day
+                    </h3>
+
+                    <p class="holiday-info">
+                        📅 26 January 2027
+                    </p>
+
+                    <p class="holiday-info">
+                        📆 Tuesday
+                    </p>
+
+                    <p class="holiday-description">
+                        National holiday celebrating the adoption of the Constitution of India.
+                    </p>
+
+                    <button
+                        class="add-holiday-btn"
+                        data-name="Republic Day"
+                        data-date="2027-01-26"
+                        data-time="00:00"
+                        data-type="National"
+                        data-location="India"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Holi -->
+            <div
+                class="holiday-card"
+                data-category="Festival"
+                data-name="Holi"
+            >
+
+                <div class="holiday-icon">
+                    🌈
+                </div>
+
+                <div class="holiday-content">
+
+                    <span class="holiday-category">
+                        Festival
+                    </span>
+
+                    <h3>
+                        Holi
+                    </h3>
+
+                    <p class="holiday-info">
+                        📅 22 March 2027
+                    </p>
+
+                    <p class="holiday-info">
+                        📆 Monday
+                    </p>
+
+                    <p class="holiday-description">
+                        The festival of colours celebrated with colours, music and gatherings.
+                    </p>
+
+                    <button
+                        class="add-holiday-btn"
+                        data-name="Holi"
+                        data-date="2027-03-22"
+                        data-time="00:00"
+                        data-type="Festival"
+                        data-location="India"
+                    >
+                        + Add to My Calendar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- No Results -->
+            <div
+                class="no-holidays"
+                id="noHolidays"
+            >
+
+                <div class="no-holidays-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    No holidays found
+                </h3>
+
+                <p>
+                    Try a different search or category.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/holidays-festivals.js"></script>
+
+</body>
+</html>

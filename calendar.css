@@ -1,0 +1,283 @@
+.calendar-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.calendar-controls button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: #1f6f5b;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.calendar-controls h2 {
+    min-width: 200px;
+    text-align: center;
+}
+
+.calendar-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-weekdays div {
+    text-align: center;
+    font-weight: 600;
+    padding: 15px;
+    color: #1f6f5b;
+}
+
+.calendar-days div {
+    min-height: 80px;
+    padding: 12px;
+    border: 1px solid #edf1ef;
+    cursor: pointer;
+}
+
+.calendar-days div:hover {
+    background: #f1f8f5;
+}
+
+.calendar-days .today {
+    background: #dff2e9;
+    font-weight: bold;
+    color: #1f6f5b;
+}
+
+.calendar-days .empty {
+    background: #fafafa;
+    cursor: default;
+}
+
+.calendar-events {
+    margin-top: 25px;
+}
+
+.calendar-event-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.calendar-event-item span {
+    font-size: 25px;
+}
+
+.calendar-event-item p {
+    margin: 5px 0 0;
+    color: #777;
+}
+
+.add-event-btn {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: #1f6f5b;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+
+    .calendar-days div {
+        min-height: 55px;
+        padding: 7px;
+    }
+
+    .calendar-weekdays div {
+        padding: 8px 2px;
+        font-size: 12px;
+    }
+
+    .calendar-controls {
+        gap: 10px;
+    }
+}
+.event-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.event-modal.show {
+    display: flex;
+}
+
+.event-form {
+    width: 420px;
+    max-width: 90%;
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-header h2 {
+    margin: 0;
+}
+
+.form-header button {
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.event-form label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 600;
+}
+
+.event-form input,
+.event-form select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.save-event-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 9px;
+    background: #1f6f5b;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.event-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.edit-event-btn,
+.delete-event-btn {
+    border: none;
+    padding: 7px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.edit-event-btn {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.delete-event-btn {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.edit-event-btn:hover,
+.delete-event-btn:hover {
+    opacity: 0.8;
+}
+/* Event Action Buttons */
+
+.event-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+}
+
+.edit-event-btn,
+.delete-event-btn {
+    border: none;
+    padding: 7px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.edit-event-btn {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.delete-event-btn {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.edit-event-btn:hover,
+.delete-event-btn:hover {
+    opacity: 0.8;
+}
+/* ==========================================
+   SEARCH & FILTER EVENTS
+   ========================================== */
+
+.event-search-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.event-search-box {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+#eventSearch {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+#eventSearch:focus {
+    border-color: #4caf50;
+}
+
+#eventFilter {
+    width: 200px;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    outline: none;
+}
+
+#eventFilter:focus {
+    border-color: #4caf50;
+}

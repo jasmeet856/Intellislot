@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IntelliSlot | Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Intelli<span>Slot</span>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html" class="active">
+                📊 Dashboard
+            </a>
+
+            <a href="calendar.html">
+                📅 Calendar
+            </a>
+
+            <a href="campus-events.html">
+                🎓 Campus Events
+            </a>
+
+            <a href="corporate-events.html">
+                🏢 Corporate Events
+            </a>
+
+            <a href="holidays-festivals.html">
+                🎉 Holidays & Festivals
+            </a>
+
+            <a href="weather.html">
+                🌤️ Weather
+            </a>
+
+           
+<a href="./air-quality.html">
+    🌫️ Air Quality
+</a>
+
+<a href="./notifications.html">
+    🔔 Notifications
+    <span id="unreadCount">0</span>
+</a>
+
+<a href="./settings.html">⚙️ Settings</a>
+
+        </nav>
+
+<div class="sidebar-bottom">
+
+    <a href="settings.html">⚙️ Settings</a>
+
+    <a href="index.html">
+        ← Home
+    </a>
+
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <p class="small-heading">
+                    SMART DASHBOARD
+                </p>
+
+                <h1>
+                    Good Morning 👋
+                </h1>
+
+                <p class="date" id="currentDate">
+                    Loading date...
+                </p>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <div class="notification-icon">
+
+                    🔔
+
+                    <span id="headerNotificationCount">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div class="profile">
+
+                    <div class="profile-circle">
+                        U
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            User
+                        </strong>
+
+                        <small>
+                            My Profile
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Summary Cards -->
+
+        <section class="summary-grid">
+
+
+            <!-- Weather Card -->
+
+            <div class="summary-card weather-card">
+
+                <div>
+
+                    <p>
+                        Current Weather
+                    </p>
+
+                    <h2>
+                        <span id="temperature">--</span>°C
+                    </h2>
+
+                    <span id="weatherStatus">
+                        Loading...
+                    </span>
+
+                </div>
+
+
+                <div class="big-icon">
+                    ☁️
+                </div>
+
+            </div>
+
+
+            <!-- Air Quality Card -->
+
+            <div class="summary-card">
+
+                <p>
+                    Air Quality
+                </p>
+
+                <h2 id="aqiValue">
+                    --
+                </h2>
+
+                <span id="aqiStatus">
+                    Waiting for data
+                </span>
+
+            </div>
+
+
+            <!-- Upcoming Events Card -->
+
+            <div class="summary-card">
+                
+
+<div class="event-list" id="upcomingEvents">
+    <p>Loading upcoming events...</p>
+</div>
+
+
+
+                <p>
+                    Upcoming Events
+                </p>
+
+                <h2 id="eventCount">
+                    --
+                </h2>
+
+                <span>
+                    Next 14 days
+                </span>
+
+            </div>
+
+
+            <!-- Notifications Card -->
+
+            <div class="summary-card">
+
+                <p>
+                    Notifications
+                </p>
+
+                <h2 id="notificationCount">
+                    0
+                </h2>
+
+                <span>
+                    Unread notifications
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Main Dashboard Grid -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- Weather Details -->
+
+            <div class="dashboard-card">
+
+                <div class="card-title">
+
+                    <div>
+
+                        <p>
+                            Environment
+                        </p>
+
+                        <h3>
+                            Weather Overview
+                        </h3>
+
+                    </div>
+
+                    <span>
+                        Live
+                    </span>
+
+                </div>
+
+
+                <div class="weather-details">
+
+
+                    <div>
+
+                        <small>
+                            Temperature
+                        </small>
+
+                        <strong id="weatherTemp">
+                            --°C
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            Humidity
+                        </small>
+
+                        <strong id="humidity">
+                            --%
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            Wind Speed
+                        </small>
+
+                        <strong id="windSpeed">
+                            -- km/h
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            Rain Probability
+                        </small>
+
+                        <strong id="rainProbability">
+                            --%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Upcoming Events -->
+
+            <div class="dashboard-card">
+
+                <div class="card-title">
+
+                    <div>
+
+                        <p>
+                            Calendar
+                        </p>
+
+                        <h3>
+                            Upcoming Events
+                        </h3>
+
+                    </div>
+
+                    <a href="calendar.html">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="event-list">
+
+
+                    <div class="event">
+
+                        <div class="event-date">
+
+                            15
+
+                            <small>
+                                SEP
+                            </small>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Assignment Submission
+                            </strong>
+
+                            <p>
+                                10:00 AM • Campus
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="event">
+
+                        <div class="event-date">
+
+                            18
+
+                            <small>
+                                SEP
+                            </small>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                AI Workshop
+                            </strong>
+
+                            <p>
+                                11:00 AM • Seminar Hall
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="event">
+
+                        <div class="event-date">
+
+                            22
+
+                            <small>
+                                SEP
+                            </small>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Corporate Meeting
+                            </strong>
+
+                            <p>
+                                2:00 PM • Online
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Notifications -->
+
+            <div class="dashboard-card notification-card">
+
+                <div class="card-title">
+
+                    <div>
+<span id="unreadCount">0</span>
+                        <p>
+                            Smart Alerts
+                        </p>
+
+                        <h3>
+                            Recent Notifications
+                        </h3>
+
+                    </div>
+
+                    <a href="notifications.html">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="notification-list">
+
+
+                    <div class="notification">
+
+                        <span class="notification-symbol">
+                            📅
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Upcoming Event
+                            </strong>
+
+                            <p>
+                                AI Workshop is within the
+                                14-day reminder period.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notification">
+
+                        <span class="notification-symbol">
+                            🌦️
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Weather Update
+                            </strong>
+
+                            <p>
+                                Check the latest forecast
+                                before outdoor activities.
+                            </p>
+
+                        </div>
+
+                    </div>
+                    
+<div class="notification-controls">
+    <button id="enableNotifications">
+        Enable Browser Notifications
+    </button>
+    <p id="notificationStatus">
+        Browser notifications are not enabled.
+    </p>
+</div>
+
+
+
+                    <div class="notification">
+
+                        <span class="notification-symbol">
+                            🌿
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Air Quality
+                            </strong>
+
+                            <p>
+                                Latest air-quality information
+                                will appear here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quick Actions -->
+
+            <div class="dashboard-card">
+
+                <div class="card-title">
+
+                    <div>
+
+                        <p>
+                            Quick Access
+                        </p>
+
+                        <h3>
+                            Manage IntelliSlot
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <button onclick="window.location.href='calendar.html'">
+                        + Add Event
+                    </button>
+
+                    <button onclick="window.location.href='calendar.html'">
+                        📅 Calendar
+                    </button>
+
+                    <button onclick="window.location.href='notifications.html'">
+                        🔔 Notifications
+                    </button>
+
+                    <button onclick="openSettings()">
+                        ⚙️ Settings
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Dashboard JavaScript -->
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

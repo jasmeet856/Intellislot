@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IntelliSlot | Air Quality</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/air-quality.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            Intelli<span>Slot</span>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                📊 Dashboard
+            </a>
+
+            <a href="calendar.html">
+                📅 Calendar
+            </a>
+
+            <a href="campus-events.html">
+                🎓 Campus Events
+            </a>
+
+            <a href="corporate-events.html">
+                🏢 Corporate Events
+            </a>
+
+            <a href="holidays-festivals.html">
+                🎉 Holidays & Festivals
+            </a>
+
+            <a href="weather.html">
+                🌤️ Weather
+            </a>
+
+            <a href="air-quality.html" class="active">
+                🌫️ Air Quality
+            </a>
+
+            <a href="notifications.html">🔔 Notifications</a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#">
+                ⚙️ Settings
+            </a>
+
+            <a href="index.html">
+                🏠 Home
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <div>
+
+                <p class="small-heading">
+                    AIR QUALITY
+                </p>
+
+                <h1>
+                    Air Quality Dashboard 🌫️
+                </h1>
+
+                <p class="page-description">
+                    Monitor air pollution levels and air quality conditions.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- Search -->
+
+        <section class="air-search">
+
+            <input
+                type="text"
+                id="airCityInput"
+                placeholder="Enter city name..."
+                value="Ludhiana"
+            >
+
+            <button id="searchAirBtn">
+                🔍 Search
+            </button>
+
+            <button id="refreshAirBtn">
+                🔄 Refresh
+            </button>
+
+        </section>
+
+
+        <!-- Loading -->
+
+        <div id="airLoading" class="air-message">
+            Loading air quality...
+        </div>
+
+
+        <!-- Error -->
+
+        <div id="airError" class="air-error">
+            Unable to load air quality data.
+        </div>
+
+
+        <!-- Air Quality Content -->
+
+        <section id="airContent" class="air-content">
+
+
+            <!-- Main AQI Card -->
+
+            <div class="aqi-main-card">
+
+                <div class="aqi-location">
+                    📍 <span id="airLocation">Ludhiana</span>
+                </div>
+
+                <div class="aqi-main">
+
+                    <div>
+
+                        <p class="aqi-label">
+                            Air Quality Index
+                        </p>
+
+                        <h2 id="aqiValue">
+                            --
+                        </h2>
+
+                        <span
+                            id="aqiStatus"
+                            class="aqi-status"
+                        >
+                            Loading...
+                        </span>
+
+                    </div>
+
+                    <div
+                        id="aqiIcon"
+                        class="aqi-icon"
+                    >
+                        🌫️
+                    </div>
+
+                </div>
+
+                <p class="aqi-updated">
+                    Last updated:
+                    <span id="airUpdatedTime">--</span>
+                </p>
+
+            </div>
+
+
+            <!-- Pollutants -->
+
+            <h2 class="section-title">
+                Pollutant Details
+            </h2>
+
+
+            <div class="pollutants-grid">
+
+
+                <!-- PM2.5 -->
+
+                <div class="pollutant-card">
+
+                    <div class="pollutant-icon">
+                        🫁
+                    </div>
+
+                    <div>
+
+                        <p>
+                            PM2.5
+                        </p>
+
+                        <strong id="pm25">
+                            -- μg/m³
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PM10 -->
+
+                <div class="pollutant-card">
+
+                    <div class="pollutant-icon">
+                        🌫️
+                    </div>
+
+                    <div>
+
+                        <p>
+                            PM10
+                        </p>
+
+                        <strong id="pm10">
+                            -- μg/m³
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CO -->
+
+                <div class="pollutant-card">
+
+                    <div class="pollutant-icon">
+                        💨
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Carbon Monoxide
+                        </p>
+
+                        <strong id="co">
+                            -- μg/m³
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NO2 -->
+
+                <div class="pollutant-card">
+
+                    <div class="pollutant-icon">
+                        ⚗️
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Nitrogen Dioxide
+                        </p>
+
+                        <strong id="no2">
+                            -- μg/m³
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- O3 -->
+
+                <div class="pollutant-card">
+
+                    <div class="pollutant-icon">
+                        🟢
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Ozone
+                        </p>
+
+                        <strong id="o3">
+                            -- μg/m³
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SO2 -->
+
+                <div class="pollutant-card">
+
+                    <div class="pollutant-icon">
+                        🔬
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Sulphur Dioxide
+                        </p>
+
+                        <strong id="so2">
+                            -- μg/m³
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AQI Information -->
+
+            <div class="aqi-info-card">
+
+                <h3>
+                    Air Quality Information
+                </h3>
+
+                <div class="aqi-guide">
+
+                    <div>
+                        <span class="guide-dot good"></span>
+                        Good
+                    </div>
+
+                    <div>
+                        <span class="guide-dot moderate"></span>
+                        Moderate
+                    </div>
+
+                    <div>
+                        <span class="guide-dot unhealthy"></span>
+                        Unhealthy
+                    </div>
+
+                    <div>
+                        <span class="guide-dot poor"></span>
+                        Poor
+                    </div>
+
+                </div>
+
+                <p>
+                    Air quality information helps users understand
+                    pollution levels and environmental conditions.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/air-quality.js"></script>
+
+</body>
+</html>
